@@ -6,6 +6,8 @@ import Hero from'src/components/home/hero';
 import { redirect } from 'next/navigation';
 
 import SignOut from 'src/components/SignOut';
+import Services from 'src/components/home/services';
+import Footer from 'src/components/home/footer';
 
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies });
@@ -19,6 +21,8 @@ export default async function Home() {
     <div className="Main">
       <NavBar />
       <Hero />
+      <Services />
+      <Footer />
     </div>);
   }
 
