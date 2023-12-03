@@ -3,7 +3,6 @@ import { cookies } from 'next/headers';
 import Link from 'next/link';
 import NavBar from'src/components/navbar';
 import Hero from'src/components/home/hero';
-import { redirect } from 'next/navigation';
 
 import SignOut from 'src/components/SignOut';
 import Services from 'src/components/home/services';
