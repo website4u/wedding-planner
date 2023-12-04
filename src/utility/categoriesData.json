@@ -1,0 +1,53 @@
+[
+    {
+      "id": 2,
+      "name": "Poruwa Ceremony",
+      "description": "Experts in organizing and decorating the Poruwa ceremony."
+    },
+    {
+      "id": 5,
+      "name": "Jewelers",
+      "description": "Discover unique Kandyan jewelry pieces for the bride and groom."
+    },
+    {
+      "id": 6,
+      "name": "Wedding Cake Bakers",
+      "description": "Find bakers specializing in creating traditional Sri Lankan wedding cakes."
+    },
+    {
+      "id": 7,
+      "name": "Auspicious Time Setters",
+      "description": "Consult experts who can help determine the most auspicious times for wedding ceremonies."
+    },
+    {
+      "id": 10,
+      "name": "Caterers",
+      "description": "Serve authentic Sri Lankan cuisine prepared by experienced traditional caterers."
+    },
+    {
+      "id": 12,
+      "name": "Wedding Photographers",
+      "description": "Capture the essence of your wedding with photographers experienced in ceremonies."
+    },
+    {
+      "id": 15,
+      "name": "Wedding Planners",
+      "description": "Seek the expertise of planners specialized in organizing weddings."
+    },
+    {
+      "id": 16,
+      "name": "Dress Designers",
+      "description": "Explore modern and stylish wedding dress designs for Weddings."
+    },
+    {
+      "id": 22,
+      "name": "Live Bands",
+      "description": "Book live bands to entertain guests with Western music at your wedding reception."
+    },
+    {
+      "id": 23,
+      "name": "Wedding Venues",
+      "description": "Plan a destination wedding with professionals experienced in celebrations."
+    }
+  ]
+  
