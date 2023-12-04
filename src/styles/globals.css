@@ -6,13 +6,16 @@
   h2 {
     @apply py-4 text-4xl font-black text-gray-800;
   }
-
+  html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
   .button {
-    @apply custom-focus rounded-full border-2 border-green-400 bg-white px-8 py-2 font-bold text-green-400 hover:bg-green-400 hover:text-white focus:bg-green-400 focus:text-white;
+    @apply custom-focus rounded-full border-2 border-brown bg-white px-8 py-2 font-bold text-brown hover:bg-brown hover:text-white focus:bg-brown focus:text-white;
   }
 
   .button-inverse {
-    @apply custom-focus rounded-full border-2 border-white bg-green-400 px-8 py-2 font-bold text-white hover:border-green-400 hover:bg-white hover:text-green-400 focus:border-green-400 focus:bg-white focus:text-green-400;
+    @apply custom-focus rounded-full border-2 border-white bg-brown px-8 py-2 font-bold text-white hover:border-brown hover:bg-white hover:text-brown focus:border-brown focus:bg-white focus:text-brown;
   }
 
   .card {
@@ -24,7 +27,7 @@
   }
 
   .custom-focus {
-    @apply focus:border-green-400 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2;
+    @apply focus:border-brown focus:outline-none focus:ring-2 focus:ring-brown focus:ring-offset-2;
   }
 
   .heading {
@@ -44,10 +47,72 @@
   }
 
   .link {
-    @apply custom-focus rounded-md font-semibold text-green-400;
+    @apply custom-focus rounded-md font-semibold text-brown;
   }
 
   .row {
     @apply flex flex-row items-center justify-start gap-1;
   }
+}
+
+
+
+/* calander */
+
+/* Calendar Container */
+.calendar-container {
+  max-width: 300px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Month Header */
+.month-header {
+  text-align: center;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* Weekdays */
+.weekdays {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.weekdays div {
+  text-align: center;
+  padding: 5px;
+}
+
+/* Days */
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Style for days in other months */
+.other-month {
+  color: #ccc;
+}
+
+/* Style for selected day */
+.selected {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* Hover effect for days */
+.day:hover {
+  background-color: #ddd;
 }

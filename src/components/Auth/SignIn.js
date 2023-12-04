@@ -29,11 +29,11 @@ const SignIn = () => {
 
   return (
     <>
-      <h1 className=" text-2xl font-bold sm:text-4xl pb-2">
+      <h1 className=" text-2xl font-bold sm:text-4xl pb-2 text-rose">
         Wedding Planner
       </h1>
 
-      <div className="card">
+      <div className="card bg-rose">
         <h2 className="w-full text-center">Sign In</h2>
         <Formik
           initialValues={{
