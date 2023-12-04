@@ -22,13 +22,13 @@ export default async function Home() {
     <div id="Main">
       <NavBar />
       <Hero />
-      <div className='dark:bg-gray-800 p-4'>
-        <h2 className="text-3xl font-semibold text-white pl-4 mb-6">Featured Vendor Categories</h2>
+      <div className='bg-rose p-4'>
+        <h2 className="text-3xl font-semibold text-brown pl-4 mb-6">Featured Vendor Categories</h2>
         <VendorCategoryList />
       </div>
 
-      <div className='dark:bg-gray-800 p-4'>
-        <h2 className="text-3xl font-semibold pl-4  text-white mb-6">Featured Vendors</h2>
+      <div className='bg-rose p-4'>
+        <h2 className="text-3xl font-semibold pl-4  text-brown mb-6">Featured Vendors</h2>
         <VendorList />
       </div>
      

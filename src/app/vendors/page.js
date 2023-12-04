@@ -47,7 +47,7 @@ const VendorsPage = () => {
     <>
     <Navbar />
     <div className="flex">
-      <div className="bg-gray-200 border-r p-4">
+      <div className="bg-ash border-r p-4">
         <div className="mb-6">
           <label className="block text-sm font-medium text-gray-700">Filter by Category:</label>
           <select

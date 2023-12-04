@@ -1,7 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Floral Delight",
+    "slug": "floral-delight-colombo",
+    "name": "Floral Delight Colombo",
     "category": "Florist",
     "image": "https://placekitten.com/400/300",
     "description": "Exquisite floral arrangements for your special day.",
@@ -9,7 +10,8 @@
   },
   {
     "id": 2,
-    "name": "Capture Moments",
+    "slug": "capture-moments-gampaha",
+    "name": "Capture Moments Gampaha",
     "category": "Photography",
     "image": "https://placekitten.com/401/300",
     "description": "Capture every moment of your wedding with our professional photography services.",
@@ -17,7 +19,8 @@
   },
   {
     "id": 3,
-    "name": "Sweet Serenity",
+    "slug": "sweet-serenity-kandy",
+    "name": "Sweet Serenity Kandy",
     "category": "Bakery",
     "image": "https://placekitten.com/402/300",
     "description": "Delicious wedding cakes and sweet treats for your guests.",
@@ -25,7 +28,8 @@
   },
   {
     "id": 4,
-    "name": "Dress Elegance",
+    "slug": "dress-elegance-galle",
+    "name": "Dress Elegance Galle",
     "category": "Bridal Wear",
     "image": "https://placekitten.com/403/300",
     "description": "Elegant bridal wear to make you feel like a princess on your big day.",
@@ -33,49 +37,55 @@
   },
   {
     "id": 5,
-    "name": "Floral Delight",
+    "slug": "floral-delight-jaffna",
+    "name": "Floral Delight Jaffna",
     "category": "Florist",
-    "image": "https://placekitten.com/400/300",
+    "image": "https://placekitten.com/404/300",
     "description": "Exquisite floral arrangements for your special day 2.",
     "district": "Jaffna"
   },
   {
     "id": 6,
-    "name": "Floral Delight",
+    "slug": "floral-delight-colombo-2",
+    "name": "Floral Delight Colombo 2",
     "category": "Florist",
-    "image": "https://placekitten.com/400/300",
+    "image": "https://placekitten.com/405/300",
     "description": "Exquisite floral arrangements for your special day.",
     "district": "Colombo"
   },
   {
     "id": 7,
-    "name": "Capture Moments",
+    "slug": "capture-moments-gampaha-2",
+    "name": "Capture Moments Gampaha 2",
     "category": "Photography",
-    "image": "https://placekitten.com/401/300",
+    "image": "https://placekitten.com/406/300",
     "description": "Capture every moment of your wedding with our professional photography services.",
     "district": "Gampaha"
   },
   {
     "id": 8,
-    "name": "Sweet Serenity",
+    "slug": "sweet-serenity-kandy-2",
+    "name": "Sweet Serenity Kandy 2",
     "category": "Bakery",
-    "image": "https://placekitten.com/402/300",
+    "image": "https://placekitten.com/407/300",
     "description": "Delicious wedding cakes and sweet treats for your guests.",
     "district": "Kandy"
   },
   {
     "id": 9,
-    "name": "Dress Elegance",
+    "slug": "dress-elegance-galle-2",
+    "name": "Dress Elegance Galle 2",
     "category": "Bridal Wear",
-    "image": "https://placekitten.com/403/300",
+    "image": "https://placekitten.com/408/300",
     "description": "Elegant bridal wear to make you feel like a princess on your big day.",
     "district": "Galle"
   },
   {
     "id": 10,
-    "name": "Floral Delight",
+    "slug": "floral-delight-jaffna-2",
+    "name": "Floral Delight Jaffna 2",
     "category": "Florist",
-    "image": "https://placekitten.com/400/300",
+    "image": "https://placekitten.com/409/300",
     "description": "Exquisite floral arrangements for your special day 2.",
     "district": "Jaffna"
   }
