@@ -17,7 +17,7 @@ export default function Navbar() {
         </a>
         <div className="hidden md:flex space-x-8">
           <NavLink href="/" title="Home" />
-          <NavLink href="#" title="About" />
+          <NavLink href="/vendors" title="Vendors" />
           <NavLink href="#" title="Services" />
           <NavLink href="#" title="Pricing" />
           <NavLink href="/sign-in" title="Login" />

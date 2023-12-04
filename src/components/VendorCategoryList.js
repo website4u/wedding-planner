@@ -1,5 +1,6 @@
 import React from 'react';
 import VendorCategoryItem from './VendorCategoryItem';
+// @ts-ignore
 import categoriesData from '../utility/categoriesData.json'; // Import your JSON data
 
 const VendorCategoryList = () => {

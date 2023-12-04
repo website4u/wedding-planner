@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Floral Delight",
+    "category": "Florist",
+    "image": "https://placekitten.com/400/300",
+    "description": "Exquisite floral arrangements for your special day.",
+    "district": "Colombo"
+  },
+  {
+    "id": 2,
+    "name": "Capture Moments",
+    "category": "Photography",
+    "image": "https://placekitten.com/401/300",
+    "description": "Capture every moment of your wedding with our professional photography services.",
+    "district": "Gampaha"
+  },
+  {
+    "id": 3,
+    "name": "Sweet Serenity",
+    "category": "Bakery",
+    "image": "https://placekitten.com/402/300",
+    "description": "Delicious wedding cakes and sweet treats for your guests.",
+    "district": "Kandy"
+  },
+  {
+    "id": 4,
+    "name": "Dress Elegance",
+    "category": "Bridal Wear",
+    "image": "https://placekitten.com/403/300",
+    "description": "Elegant bridal wear to make you feel like a princess on your big day.",
+    "district": "Galle"
+  },
+  {
+    "id": 5,
+    "name": "Floral Delight",
+    "category": "Florist",
+    "image": "https://placekitten.com/400/300",
+    "description": "Exquisite floral arrangements for your special day 2.",
+    "district": "Jaffna"
+  },
+  {
+    "id": 6,
+    "name": "Floral Delight",
+    "category": "Florist",
+    "image": "https://placekitten.com/400/300",
+    "description": "Exquisite floral arrangements for your special day.",
+    "district": "Colombo"
+  },
+  {
+    "id": 7,
+    "name": "Capture Moments",
+    "category": "Photography",
+    "image": "https://placekitten.com/401/300",
+    "description": "Capture every moment of your wedding with our professional photography services.",
+    "district": "Gampaha"
+  },
+  {
+    "id": 8,
+    "name": "Sweet Serenity",
+    "category": "Bakery",
+    "image": "https://placekitten.com/402/300",
+    "description": "Delicious wedding cakes and sweet treats for your guests.",
+    "district": "Kandy"
+  },
+  {
+    "id": 9,
+    "name": "Dress Elegance",
+    "category": "Bridal Wear",
+    "image": "https://placekitten.com/403/300",
+    "description": "Elegant bridal wear to make you feel like a princess on your big day.",
+    "district": "Galle"
+  },
+  {
+    "id": 10,
+    "name": "Floral Delight",
+    "category": "Florist",
+    "image": "https://placekitten.com/400/300",
+    "description": "Exquisite floral arrangements for your special day 2.",
+    "district": "Jaffna"
+  }
+]
