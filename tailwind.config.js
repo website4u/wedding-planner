@@ -8,12 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'rose': '#EFC7C2',
-        'lrose': '#FFE5D4',
-        'ash': '#BFD3C1',
-        'lbule': '#68a691',
-        'brown': '#694F5D',
+        'rose': '#FCF8E8',
+        'lrose': '#94B49F',
+        'ash': '#ECB390',
+        'lbule': '#DF7861',
+        'brown': '#3C3C3C',
       },
     }
   }
 };
+
