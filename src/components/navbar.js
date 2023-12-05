@@ -10,7 +10,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className=" border-gray-200 bg-rose text-brown">
+    <nav className=" border-gray-200 bg-ash text-brown">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span className="text-2xl font-semibold whitespace-nowrap text-brown">Wedding Planner</span>

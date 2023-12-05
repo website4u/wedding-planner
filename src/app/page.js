@@ -4,6 +4,7 @@ import Link from 'next/link';
 import NavBar from'src/components/navbar';
 import Hero from'src/components/home/hero';
 
+
 import SignOut from 'src/components/SignOut';
 import Services from 'src/components/home/services';
 import Footer from 'src/components/home/footer';

@@ -6,10 +6,12 @@
   h2 {
     @apply py-4 text-4xl font-black text-gray-800;
   }
-  html{
+
+  html {
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
+
   .button {
     @apply custom-focus rounded-full border-2 border-brown bg-white px-8 py-2 font-bold text-brown hover:bg-brown hover:text-white focus:bg-brown focus:text-white;
   }
@@ -56,8 +58,6 @@
 }
 
 
-
-/* calander */
 
 /* Calendar Container */
 .calendar-container {

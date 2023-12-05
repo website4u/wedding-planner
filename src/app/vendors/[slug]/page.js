@@ -1,17 +1,22 @@
-// pages/[slug].js
 
 import React from 'react';
 import Navbar from 'src/components/navbar';
 import Footer from 'src/components/home/footer';
-import Image from 'next/image'
+import NextImage from 'next/image'
 import vendorsData from '../../../utility/vendorsDataAll.json';
 import Calendar from 'src/components/calander';
 
+import { Space, Rate , Tag , Image } from 'antd';
+import BookingForm from 'src/components/vendor/bookingForm';
+import VendorNav from 'src/components/vendor/vendorNav';
+import AddRating from 'src/components/vendor/addRating';
+import ProjectList from 'src/components/vendor/projectList';
+import SimilarVendors from 'src/components/vendor/SimilarVendors';
+const desc = ['terrible', 'bad', 'normal', 'good', 'wonderful'];
+
 const SingleVendorPage = ({ vendor }) => {
-  // const handleBooking = () => {
-  //   // Handle booking logic, e.g., send data to a server, display confirmation, etc.
-  //   alert('Booking submitted!');
-  // };
+
+
   if (!vendor) {
     return (
       <>
@@ -23,14 +28,23 @@ const SingleVendorPage = ({ vendor }) => {
       </>
     );
   }
+    const encodeURIString = (str) => encodeURIComponent(str);
+
+    // Function to generate the WhatsApp link
+    const generateWhatsAppLink = () => {
+      const phoneNumber = '9471234567'; // Replace with the actual vendor's phone number
+      const message = `Hello ${vendor.name}, I'm contacting you through the True Wedding Planner. Can you please help me with my project?`;
+      const encodedMessage = encodeURIString(message);
+      return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+    };
 
   return (
     <>
       <Navbar />
       <div className="relative">
-        <Image
+        <NextImage
           src={vendor.image}
-          className="max-h-80 object-cover w-full opacity-60"
+          className="max-h-96 object-cover w-full opacity-60"
           width={1000}
           height={100}
           alt="Vendor Image"
@@ -38,68 +52,70 @@ const SingleVendorPage = ({ vendor }) => {
         <div className="absolute top-0 left-20 w-full h-full flex pt-48 ">
           <div className="text-brown text-start">
           <div className="flex  mt-2">
-              {/* {vendor.tags.map((tag) => (
-                <span key={tag} className="mr-2 text-sm bg-rose text-white p-1 rounded-md">{tag}</span>
-              ))} */}
-              <span className="mr-2 text-sm bg-rose text-brown p-1 rounded-md">test</span>
-              <span className="mr-2 text-sm bg-rose text-brown p-1 rounded-md">Best</span>
+              {vendor.tags.map((tag) => (
+                <Tag key={tag} >{tag}</Tag>
+              ))}
             </div>
-            <h1 className="text-3xl font-bold">{vendor.name}</h1>
-            <div className="flex mt-2">
-              <span className="">★ 9.2</span>
-            </div>
+            <h1 className="text-3xl font-bold py-2">{vendor.name}</h1>
+            <p className="py-2">Category: {vendor.category}</p>
+            <Space className='py-2'>
+              <Rate tooltips={desc} value={vendor.ratings.average} />
+              <span className="text-base">
+                {vendor.ratings.average} ({vendor.ratings.count})
+              </span>
+            </Space>
           </div>
         </div>
       </div>
+      <VendorNav />
       <div className="container mx-auto mt-8 flex">
-        {/* Vendor Details */}
         <div className="flex-1">
-          <p className="text-gray-700 mb-4">{vendor.description}</p>
-          <p className="text-gray-500">Category: {vendor.category}</p>
-          <p className="text-gray-500">District: {vendor.district}</p>
-
-          {/* Booking Form */}
-          <div className="mt-6">
-            <h2 className="text-2xl font-bold mb-4">Book {vendor.name}</h2>
-            <form>
-            <div className="mb-4">
-              <label htmlFor="date" className="block text-gray-700 font-bold mb-2">
-                Select Date:
-              </label>
-              <input
-                type="date"
-                id="date"
-                name="date"
-                className="w-full border p-2"
-                required
-              />
+          <h1 className='text-2xl font-bold pb-16' id="vendorP">Vendor Profile</h1>
+          <div>
+            <p className="text-brown mb-4">{vendor.description}</p>
+            <p className="text-brown">Category: {vendor.category}</p>
+            <p className="text-brown">District: {vendor.district}</p>
+            <p className='text-brown'>Mobile: +94 75 1 234 567</p>
+            <div className='flex gap-4'>
+              <p>Location :</p>
+              <a href='https://maps.app.goo.gl/H7frSPTtj2ZG4Mx16' target='_blank' className='text-lbule underline'>MAP</a>
             </div>
-
-            <div className="mb-4">
-              <label htmlFor="message" className="block text-gray-700 font-bold mb-2">
-                Your Message:
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                className="w-full border p-2"
-                required
-              ></textarea>
+            <div className='flex gap-4'>
+              <p>WhatsApp :</p>
+              <a href={generateWhatsAppLink()} target='_blank' className="text-lbule underline">
+              +94 75 1 234 567
+            </a>
             </div>
-
-            <button
-              type="button"
-              className="bg-primary-700 text-white py-2 px-4 rounded hover:bg-primary-800"
-            >
-              Book Now
-            </button>
-          </form>
           </div>
+          <div className=''>
+            <h2 className="text-2xl font-bold py-16" id='img-gallery'>Images</h2>
+            <div className="grid grid-cols-3 gap-4">
+              {vendor.images.map((image, index) => (
+                <div key={index} className="relative overflow-hidden">
+                  <Image
+                    src={image}
+                    className="object-cover w-full h-48"
+                    width={400}
+                    height={300}
+                    alt={`Image ${index + 1}`}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <h1 className='text-2xl font-bold py-16' id="decription">Description</h1>
+          <div>
+            <div dangerouslySetInnerHTML={{ __html: vendor.longDescription }} />
+          </div>
+          <h1 className='text-2xl font-bold py-16' id='projects'>Projects</h1>
+          <ProjectList projects={vendor.projects} />
+          <h2 className="text-2xl font-bold pt-20 pb-8" id='reviews'>Add New Rating</h2>
+          <AddRating />
+          <SimilarVendors currentVendor={vendor} vendors={vendorsData} />
         </div>
 
         {/* Sidebar */}
-        <div className="w-1/4 ml-8">
+        <div className="w-1/4 ml-8 max-h-screen">
           {/* Calendar Component */}
           <div className="bg-gray-200 p-4 rounded-md mb-4">
             {/* Your calendar component goes here */}
@@ -107,7 +123,6 @@ const SingleVendorPage = ({ vendor }) => {
             <Calendar />
           </div>
 
-          {/* Check Availability Button */}
           <button
             className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
           >
@@ -115,7 +130,7 @@ const SingleVendorPage = ({ vendor }) => {
           </button>
         </div>
       </div>
-     
+      
       <Footer />
     </>
   );
