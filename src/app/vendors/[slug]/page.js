@@ -6,12 +6,13 @@ import NextImage from 'next/image'
 import vendorsData from '../../../utility/vendorsDataAll.json';
 import Calendar from 'src/components/calander';
 
-import { Space, Rate , Tag , Image } from 'antd';
+import { Space, Rate, Tag, Image } from 'antd';
 import BookingForm from 'src/components/vendor/bookingForm';
 import VendorNav from 'src/components/vendor/vendorNav';
 import AddRating from 'src/components/vendor/addRating';
 import ProjectList from 'src/components/vendor/projectList';
 import SimilarVendors from 'src/components/vendor/SimilarVendors';
+import VendorProfile from 'src/components/vendor/profileVendor';
 const desc = ['terrible', 'bad', 'normal', 'good', 'wonderful'];
 
 const SingleVendorPage = ({ vendor }) => {
@@ -28,15 +29,6 @@ const SingleVendorPage = ({ vendor }) => {
       </>
     );
   }
-    const encodeURIString = (str) => encodeURIComponent(str);
-
-    // Function to generate the WhatsApp link
-    const generateWhatsAppLink = () => {
-      const phoneNumber = '9471234567'; // Replace with the actual vendor's phone number
-      const message = `Hello ${vendor.name}, I'm contacting you through the True Wedding Planner. Can you please help me with my project?`;
-      const encodedMessage = encodeURIString(message);
-      return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
-    };
 
   return (
     <>
@@ -49,9 +41,9 @@ const SingleVendorPage = ({ vendor }) => {
           height={100}
           alt="Vendor Image"
         />
-        <div className="absolute top-0 left-20 w-full h-full flex pt-48 ">
+        <div className="absolute top-0 left-5 md:left-20 w-full h-full flex pt-20 md:pt-48 ">
           <div className="text-brown text-start">
-          <div className="flex  mt-2">
+            <div className="flex  mt-2">
               {vendor.tags.map((tag) => (
                 <Tag key={tag} >{tag}</Tag>
               ))}
@@ -68,28 +60,11 @@ const SingleVendorPage = ({ vendor }) => {
         </div>
       </div>
       <VendorNav />
-      <div className="container mx-auto mt-8 flex">
+      <div className="container mx-auto mt-8 flex flex-col md:flex-row px-4">
         <div className="flex-1">
-          <h1 className='text-2xl font-bold pb-16' id="vendorP">Vendor Profile</h1>
-          <div>
-            <p className="text-brown mb-4">{vendor.description}</p>
-            <p className="text-brown">Category: {vendor.category}</p>
-            <p className="text-brown">District: {vendor.district}</p>
-            <p className='text-brown'>Mobile: +94 75 1 234 567</p>
-            <div className='flex gap-4'>
-              <p>Location :</p>
-              <a href='https://maps.app.goo.gl/H7frSPTtj2ZG4Mx16' target='_blank' className='text-lbule underline'>MAP</a>
-            </div>
-            <div className='flex gap-4'>
-              <p>WhatsApp :</p>
-              <a href={generateWhatsAppLink()} target='_blank' className="text-lbule underline">
-              +94 75 1 234 567
-            </a>
-            </div>
-          </div>
           <div className=''>
-            <h2 className="text-2xl font-bold py-16" id='img-gallery'>Images</h2>
-            <div className="grid grid-cols-3 gap-4">
+            <h2 className="text-2xl font-bold pb-4 md:pb-16" id='img-gallery'>Images</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {vendor.images.map((image, index) => (
                 <div key={index} className="relative overflow-hidden">
                   <Image
@@ -103,22 +78,24 @@ const SingleVendorPage = ({ vendor }) => {
               ))}
             </div>
           </div>
-          <h1 className='text-2xl font-bold py-16' id="decription">Description</h1>
+          <h1 className='text-2xl font-bold py-4 md:py-16' id="decription">Description</h1>
           <div>
             <div dangerouslySetInnerHTML={{ __html: vendor.longDescription }} />
           </div>
-          <h1 className='text-2xl font-bold py-16' id='projects'>Projects</h1>
-          <ProjectList projects={vendor.projects} />
-          <h2 className="text-2xl font-bold pt-20 pb-8" id='reviews'>Add New Rating</h2>
+          <h1 className='text-2xl font-bold py-4 md:py-16' id='projects'>Projects</h1>
+          <div className='p-4'>
+            <ProjectList projects={vendor.projects} />
+          </div>
+          <h2 className="text-2xl font-bold md:pt-20 md:pb-8 py-4" id='reviews'>Add New Rating</h2>
           <AddRating />
           <SimilarVendors currentVendor={vendor} vendors={vendorsData} />
         </div>
 
         {/* Sidebar */}
-        <div className="w-1/4 ml-8 max-h-screen">
+        <div className="md:w-1/4 md:ml-8 p-4 max-h-screen">
           {/* Calendar Component */}
+          <VendorProfile vendor={vendor} />
           <div className="bg-gray-200 p-4 rounded-md mb-4">
-            {/* Your calendar component goes here */}
             <p>Calendar</p>
             <Calendar />
           </div>
@@ -130,7 +107,7 @@ const SingleVendorPage = ({ vendor }) => {
           </button>
         </div>
       </div>
-      
+
       <Footer />
     </>
   );
@@ -139,7 +116,7 @@ const SingleVendorPage = ({ vendor }) => {
 export async function generateStaticParams() {
   const vendors = vendorsData;
 
-    return vendors.map((vendor) => ({
+  return vendors.map((vendor) => ({
     slug: vendor.slug,
   }))
 }

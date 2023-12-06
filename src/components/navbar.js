@@ -37,10 +37,10 @@ export default function Navbar() {
         <div
           className={`${
             isMobileMenuOpen ? 'block' : 'hidden'
-          } md:hidden absolute top-16 left-0  w-full z-50 h-screen overflow-y-auto bg-gray-800 bg-opacity-80  dark:text-gray-300`}
+          } md:hidden absolute top-16 left-0  w-full z-50 h-screen overflow-y-auto bg-gray-800 bg-opacity-90  `}
           id="navbar-default"
         >
-          <ul className="font-medium flex flex-col p-4 mt-4  rounded-lg rtl:space-x-reverse  ">
+          <ul className="font-medium flex flex-col p-4 mt-4 rounded-lg rtl:space-x-reverse  ">
             <li>
               <NavLink href="/" title="Home" />
             </li>
@@ -67,7 +67,7 @@ export default function Navbar() {
 const NavLink = ({ href, title }) => (
   <a
     href={href}
-    className="block py-2 px-3 text-brown rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-lbule md:p-0 "
+    className="block py-2 px-3 text-rose rounded hover:bg-gray-400 md:hover:bg-transparent md:border-0 md:hover:text-brown md:p-0 "
   >
     {title}
   </a>
