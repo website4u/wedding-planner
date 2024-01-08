@@ -29,12 +29,13 @@ export default function Navbar() {
         <NavTwo />
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span className="text-2xl font-semibold whitespace-nowrap text-brown">
-            Wedding Planner
+          Serandib Weddings
           </span>
         </a>
         <div className="hidden md:flex space-x-8 gap-8">
           <NavLink href="#" title="Pricing" />
           <NavLink href="/sign-in" title="Login" />
+          <NavLink href="/sign-up" title="Sign Up" />
         </div>
         <button
           onClick={toggleMobileMenu}
@@ -87,9 +88,9 @@ export default function Navbar() {
       </nav>
       <div className="p-14 md:p-20">
         <div className="mx-auto md:flex flex-col justify-items-center items-center mt-8 p-4 bg-black bg-opacity-20 border  rounded-xl">
-          <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-lrose">
+          <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
             Elevate Your Wedding Experience with
-            <span className="text-primary-700"> Wedding Planner</span>
+            <span className="text-primary-700"> Serandib Weddings</span>
           </h1>
           <p className="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-xl ">
             Transform your special day into a magical celebration with

@@ -1,12 +1,13 @@
 "use client";
 
-import Head from "@/components/home/newhero";
+import Head from "@/components/home/Newhero";
 import CatSlider from "@/components/home/catSlider";
 
 import Services from "@/components/home/services";
 import Footer from "@/components/home/footer";
 import VendorList from "@/components/all/VendorList";
 import VendorCategoryList from "@/components/all/VendorCategoryList";
+import VendorSlider from "@/components/home/vendorSlider";
 
 function Home() {
   return (
@@ -24,7 +25,7 @@ function Home() {
         <h2 className="text-3xl font-semibold pl-4  text-brown mb-6">
           Featured Vendors
         </h2>
-        <VendorList />
+        <VendorSlider />
       </div>
       <Services />
       <Footer />

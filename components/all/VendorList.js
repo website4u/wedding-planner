@@ -1,9 +1,9 @@
 import React from 'react';
 import VendorItem from './VendorItem';
-import vendorsData from '@/lib/vendorsDataAll.json'; // Import your JSON data
+import vendorsData from '@/lib/vendorsDataAll.json';
 
 const VendorList = () => {
-  const limitedVendors = vendorsData.slice(0, 5); // Extract the first 5 vendors
+  const limitedVendors = vendorsData.slice(0, 10);
 
   return (
     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-5 p-2 ">
